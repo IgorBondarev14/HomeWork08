@@ -19,20 +19,20 @@ for (int i = 0; i < n; i++)
 Console.WriteLine();
 
 for (int i = 0; i < n; i++)
+{
+    for (int j = 0; j < m; j++)
     {
-        for (int j = 0; j < m; j++)
-        {
-            for (int k = j + 1; k < m; k++)
-            {    
-                if (array[i, j] < array[i, k])
-                {
-                    int temp = array[i, j];
-                    array[i, j] = array[i, k];
-                    array[i, k] = temp;
-                }
+        for (int k = j + 1; k < m; k++)
+        {    
+            if (array[i, j] < array[i, k])
+            {
+                int temp = array[i, j];
+                array[i, j] = array[i, k];
+                array[i, k] = temp;
             }
         }
     }
+}
 
 for (int i = 0; i < n; i++)
 {
